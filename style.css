@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: linear-gradient(0deg, #080808 0%, #222222 35%, #343434 85%, #222222 100%);
+    color: #CCC;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+    margin: 0;
+
+}
+
+h2 {
+    background-color: none;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s 2.3s;
+}
+
+#info-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+#title {
+    font-size: 32px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+#artistName {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#model {
+    width: 300px;
+    height: 300px;
+}
+
+#button-container {
+    margin-top: 12px;
+}
+
+.mylink {
+    width: 5em;
+    background: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: inherit;
+    line-height: 24px;
+    display: inline-block;
+}
+
+.previous {
+    width: 6em;
+}
+
+#spinner {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    display: grid;
+    animation: h1 4s infinite linear;
+}
+
+#spinner::before,
+#spinner::after {
+    content: "";
+    grid-area: 1/1;
+    margin: auto;
+    width: 70.7%;
+    height: 70.7%;
+    border: 2px solid;
+    animation: inherit;
+}
+
+#spinner::after {
+    width: 50%;
+    height: 50%;
+    border: 2px solid;
+    animation-duration: 2s;
+}
+
+@keyframes h1 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+#loading-modal {
+    transition: opacity 3s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
